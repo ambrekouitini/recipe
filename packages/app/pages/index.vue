@@ -2,6 +2,10 @@
 import RecipeCard from '~/components/RecipeCard.vue'
 import type { ITag } from '~/models/recipes.model'
 
+
+// Désactivez la vérification du certificat auto-signé
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+
 const { find } = useStrapi4()
 const search = useSearchStore()
 

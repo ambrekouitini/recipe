@@ -3,6 +3,9 @@ import type { RecipeData } from '~/models/recipes.model'
 const { findOne } = useStrapi4()
 const route = useRoute()
 
+// Désactivez la vérification du certificat auto-signé
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+
 const { data: recipe, pending } = useAsyncData(
   'recipe',
   () => findOne<RecipeData>(`recipes/${route.params.slug}`),
