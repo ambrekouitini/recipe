@@ -1,0 +1,16 @@
+{
+  "name": "recipe",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm -r build",
+    "packages": "pnpm --filter",
+    "app": "pnpm packages @recipe/app",
+    "strapi": "pnpm packages @recipe/strapi",
+    "dev": "pnpm -r dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
